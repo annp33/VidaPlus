@@ -1,0 +1,510 @@
+@charset "UTF-8";
+
+
+/*importando fonte google*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*configuração de variáveis*/
+:root{
+    --cor0: #c8d1ff;
+    --cor1: #7B8DEF;
+    --cor2: #394aaa;
+    --cor3: #e8ebff;
+    --cor4: #505050;
+
+    --fonte-padrao: 'Montserrat', Verdana, sans-serif;
+}
+
+
+
+/****************************************************  
+GERAIS
+*****************************************************/
+
+body{
+    background-color: white;
+    font-family: var(--fonte-padrao);
+}
+
+h1{
+    color: var(--cor2);
+    font-family: var(--fonte-padrao);
+    margin-top: 0px;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+h2{
+    color: var(--cor2);
+    text-align: left;
+    margin: 0px;
+    padding-top: 20px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.button{     
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: var(--cor2);
+    border-color: var(--cor2);
+    font: bold 16px var(--fonte-padrao);
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: var(--cor1);
+    border-color: var(--cor1);
+}
+
+a:focus, button:focus, input:focus, select:focus {
+    outline: 2px solid var(--cor1);
+    outline-offset: 2px;
+}
+
+
+
+/****************************************************  
+HEADER
+*****************************************************/
+
+.logotipo{
+    width: 300px;
+}
+
+header{
+    text-align: center;
+    padding-top: 20px;
+}
+
+header > a > img{
+    padding-bottom: 20px;
+    pointer-events: none;
+}
+
+nav{
+    background-color: var(--cor0);
+    padding: 10px 0px;
+    border-radius: 10px 10px 0px 0px;
+    max-width: 1280px;
+    margin: auto;      
+}
+
+nav a{
+    color: var(--cor4);  
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+nav a:hover{
+    background-color: var(--cor1);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 0px;
+}
+
+.botao_menu{
+    display: none;
+}
+
+#mensagem:hover{
+    color: var(--cor4);
+    background-color: var(--cor0);
+    cursor: default;
+}
+
+@media screen and (max-width: 768px) {
+    nav a{
+        display: inline-block;
+    }
+
+    nav{
+        padding: 0px;
+        border-radius: 0px;
+        display: none;
+    }
+
+    .logotipo{
+        width: 200px;
+    }
+
+    header div{
+        display: flex;
+        justify-content: right;
+        background-color: var(--cor2);
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .botao_menu{
+        display: block;
+        position: relative;
+        border: none;
+        background-color: transparent;
+        margin: 5px 10px;
+    }
+}
+
+
+
+/****************************************************  
+MAIN
+*****************************************************/
+
+main{
+    max-width: 1280px;
+    margin: auto;
+    margin-bottom: 0px;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.082);
+    background-color: var(--cor3);
+}
+
+main p{
+    color: var(--cor4);
+    margin-bottom: 0px;
+    text-align: justify;
+}
+
+
+
+/**************************************************** 
+FOOTER
+*****************************************************/
+
+footer{
+    background-color: var(--cor0);
+    color: var(--cor4);
+    margin: auto;
+    max-width: 1280px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+#footer1{
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+}
+
+#footer1 > div > a{
+    text-decoration: none;
+    color: var(--cor4);
+}
+
+#footer1 > div > a:hover{
+    text-decoration: underline;
+    color: var(--cor2);
+}
+
+#footer1 > div > h3{
+    text-align: left;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0px;
+}
+
+#coluna0{
+    display: flex;
+    align-items: center; 
+}
+
+#coluna1, #coluna2, #coluna3, #coluna4{
+    margin-left: 40px;
+}
+
+#coluna4 img{
+    margin-bottom: 8px;
+}
+
+#coluna4 > a > img{
+    margin-right: 5px;
+}
+    
+
+#rodape{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: var(--cor1);
+    color: white;
+    height: 40px;
+    padding: 18px 0px 0px 0px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+@media screen and (max-width: 768px){
+    #footer1{
+        display: block;
+        text-align: center;
+        padding-top: 5px;
+    }
+
+    #footer1 > div > h3{
+        padding-top: 20px;
+        text-align: center;
+    }    
+
+    #coluna2, #coluna3, #coluna4{
+        margin: 0px;
+    }
+    
+    #coluna4 > a{
+        padding-top: 20px;
+    }
+    
+    #coluna0, #coluna1{
+        display: none;
+    }
+} 
+
+
+
+/****************************************************  
+INÍCIO
+*****************************************************/
+
+.index{
+    text-align: center;
+}
+
+.banner{
+    max-width: 1280px;
+    max-height: 500px;
+    width: 100%;
+    pointer-events: none;
+}
+
+.faixa_banners{
+    justify-content: space-evenly;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: auto;
+    background: var(--cor3);
+}
+
+.faixa_banners > div > a > img{
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 15px;
+    pointer-events: none;
+}
+
+.faixa_banners > div {
+    justify-content: center;
+    padding: 0px 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .faixa_banners > div > a > img{
+        max-width: 220px;
+    }
+}
+
+
+
+/****************************************************  
+SERVIÇOS
+*****************************************************/
+
+.div_servicos{
+    padding: 40px 0px 40px 60px;
+}
+
+.div_servicos > h1{
+    padding-bottom: 20px;
+}
+
+.clinica > div > img, .hospital > div > img{
+    border-radius: 10px;
+    margin-bottom: 10px;
+    max-width: 400px;
+    pointer-events: none;
+}
+
+.clinica{
+    display: flex;
+}
+
+.clinica > div{
+    margin-bottom: 10px;
+    padding: 0px 30px 20px 0px;
+    text-align: right;
+}
+
+.div2{
+    text-align: center;
+}
+
+.clinica > div > h2{
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+.clinica > div > p,  .hospital > div > p{
+    margin-bottom: 20px;
+}
+
+.hospital{
+    display: flex;
+}
+
+.hospital > div{
+    padding: 0px 30px 20px 0px;
+    text-align: center;
+}
+
+.hospital > div > h2{
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .clinica > div > img{
+        max-width: 400px;
+    }    
+
+    .hospital > div > img{
+        max-width: 400px;
+    }   
+
+    .clinica > div, .hospital > div{
+        padding: 0px ;
+        text-align: center;
+    }
+
+    .div_servicos{
+        text-align: center;
+        padding: 40px 10px 40px 40px;
+    }
+
+    .div_servicos > h1{
+        text-align: left;
+    }
+}
+
+
+
+/****************************************************  
+AGENDAMENTOS
+*****************************************************/
+
+.div_agendamento{
+    padding: 40px 60px 30px 60px; 
+    max-width: 700px;
+    position: relative;
+    margin: auto;
+}
+
+.div_agendamento > h1{
+    padding-bottom: 20px; 
+}
+
+.div_agendamento p{
+    text-align: end; 
+}
+
+form select{
+    width: 200px;
+    height: 38px;
+    font: 16px montserrat;
+    color: var(--cor4);
+    border-radius: 5px;
+    padding-left: 10px;
+    background-color: white;
+}
+
+form label{
+    color: var(--cor4);
+}
+
+.solicitacao{
+    display: flex;
+}
+
+.solicitacao select, #div_convenio{
+    margin-top: 35px;
+    margin-left: 30px;
+}
+
+@media screen and (max-width: 768px){
+    .solicitacao{
+        display: block;
+    }
+
+    .solicitacao select{
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+
+    #div_convenio{
+        margin-top: 5px;
+        margin-left: 0px;
+    }
+}
+
+
+/****************************************************  
+CADASTRO
+*****************************************************/
+
+.div_cadastro{
+    padding: 40px 60px 30px 60px;
+    max-width: 700px;
+    position: relative;
+    margin: auto;
+}
+
+.div_cadastro > h1{
+    padding-bottom: 20px; 
+}
+
+.div_cadastro p{
+    text-align: end;
+}
+
+
+
+/****************************************************  
+LOGIN
+*****************************************************/
+
+.div_login{
+    padding: 40px 60px 30px 60px;
+    max-width: 500px;
+    position: relative;
+    margin: auto;
+}
+
+.div_login > h1{
+    padding-bottom: 20px; 
+}
+
+.div_login p {
+    text-align: end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
